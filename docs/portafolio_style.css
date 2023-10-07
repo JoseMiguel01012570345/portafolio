@@ -40,14 +40,6 @@
         border-color: aqua;
     }
 }
-
-/*----------------------------------------------------------------------------------------*/
-/*media queries*/
-
-
-
-
-
 /*----------------------------------------------------------------------------------------*/
 body {
     background-color: rgba(0, 6, 92, 0.747);
@@ -59,20 +51,20 @@ body {
     height: auto;
 }
 
+.myTable{
+    display: table-cell;
+}
+.over-all{
+    display: table-cell;
+}
 .space {
-    height: 120px;
+    height: 1%;
 }
 
 .marging {
     background-color: rgba(0, 55, 92, 0.281);
-    width: 40%;
+    width: 50%;
 }
-
-.marging {
-    background-color: rgba(0, 55, 92, 0.281);
-    width: 40%;
-}
-
 
 /*----------------------------------------------------------------------------------------*/
 /*introduction*/
@@ -82,7 +74,6 @@ body {
     text-align: center;
     border-right: 1px solid aqua;
     border-left: 1px solid aqua;
-    border-bottom: 1px solid rgba(0, 255, 255, 0.295);
 }
 
 .my-CV h1 {
@@ -119,81 +110,8 @@ body {
     grid-template-columns: repeat(2, 1fr);
     justify-content: space-around;
     gap: 50px;
-}
-@media (min-width:500px) and (max-width:550px) {
-    .intro img {
-        width: 150px;
-        height: 150px;
-    }
-
-    .intro {
-        gap: 30px
-    }
-
-    .languajes {
-        width: 200px;
-        height: 200px;
-    }
-
-    .image-processing img,
-    .iparty img,
-    .yu-gi-oh img,
-    .pets img,
-    .restaurant img,
-    .turisim img {
-        width: 150px;
-        height: 150px;
-    }
-
-    .turisim,
-    .restaurant,
-    .pets {
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .yu-gi-oh,
-    .image-processing,
-    .iparty {
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .social-media {
-        position: relative;
-    }
-}
-
-@media  (min-width:300px) and (max-width:400px) {
-    .intro img {
-        width: 100px;
-        height: 100px;
-        border-radius: 20px 20px 20px 20px;
-    }
-
-    .intro {
-        gap: 20px
-    }
-
-    .languajes {
-        width: 150px;
-        height: 150px;
-    }
-
-    .image-processing img,
-    .iparty img,
-    .yu-gi-oh img,
-    .pets img,
-    .restaurant img,
-    .turisim img {
-        width: 100px;
-        height: 100px;
-    }
-
-    .social-media {
-        position: relative;
-    }
 
 }
-
 /*----------------------------------------------------------------------------------------*/
 /*Skills*/
 .my-skills {
@@ -253,11 +171,12 @@ body {
 .my-experience {
     display: table-cell;
     color: rgba(202, 202, 204, 0.61);
+    margin-bottom: 0px;
+    padding-bottom: 0px;
 }
 
 .my-experience h1 {
     font-size: 100px;
-
 }
 
 .frontend,
@@ -265,10 +184,14 @@ body {
     display: grid;
     justify-content: center;
     gap: 15px;
-    margin: 15px;
-    padding: 15px;
+    margin: 5px;
+    padding: 5px;
     box-shadow: 0px 0px 130px 30px rgba(0, 255, 242, 0.349);
     border-radius: 20px;
+}
+.backend p,.frontend p{
+    align-self: center;
+    font-weight: bold;
 }
 
 .frontend h2 {
@@ -280,30 +203,35 @@ body {
     animation: front 2s infinite;
     background-color: rgb(76, 61, 119);
 }
+@media (min-width:100px)and (max-width:300px) {
+    
+    .my-experience h1 {
+        font-size:20px;
+    }    
+    .my-experience h2 {
+        font-size:20px;
+    }
+}
+@media (min-width:300px)and (max-width:500px) {
+    .my-experience h1
+     {
+        font-size:60px;
+    }
+    .my-experience h2
+     {
+        font-size:50px
+    }
+}
 
 .my-experience h1 {
     animation: front 2s infinite;
 }
-
 .backend h2 {
     font-size: 90px;
     margin-top: 150px;
-}
-@media (min-width:500) and (min-width:550) {
-    .my-experience h1 {
-        font-size: 80px;
-    }
-
-    .frontend h2 {
-        font-size: 60px
-    }
-
-    .backend h2 {
-        font-size: 60px;
-        margin-top: 60px;
-    }
 
 }
+
 .turisim,
 .restaurant,
 .pets,
@@ -312,7 +240,6 @@ body {
 .iparty {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    font-size: 28px;
 }
 
 .img-turism,
@@ -340,6 +267,66 @@ body {
     border-radius: 10px;
     box-shadow: 0px 0px 5px 2px black;
 }
+.backend img,
+    .frontend img,
+     .programming-languajes img,
+     .perfil img{
+        width: 250px;
+        height: 250px;
+    }
+@media (min-width:100px) and (max-width:200px) {
+    .backend img,
+    .frontend img,
+    .programming-languajes img,
+    .perfil img{
+        width: 30px;
+        height: 30px;
+    }
+    .backend p, .frontend p{
+        font-size: 10px;
+    }
+    .programming-languajes{
+        grid-template-columns: repeat(auto-fit,30px);
+    }
+}
+@media (min-width:200px) and (max-width:300px) {
+    .backend img,
+    .frontend img,
+     .programming-languajes img,
+     .perfil img{
+        width: 40px;
+        height: 40px;
+    }
+    .programming-languajes{
+        grid-template-columns: repeat(auto-fit,40px);
+    }
+}
+@media (min-width:300px) and (max-width:500px) {
+    .backend img,
+    .frontend img,
+     .programming-languajes img,
+     .perfil img{
+        border-color: blue;
+        width: 100px;
+        height: 100px;
+    }
+    .programming-languajes{
+        grid-template-columns: repeat(auto-fit,100px);
+    }
+}
+@media (min-width:500px) and (max-width:600px) {
+    .backend img,
+    .frontend img,
+     .programming-languajes img,
+     .perfil img{
+        border-color: blue;
+        width: 150px;
+        height: 150px;
+    }
+    .programming-languajes{
+        grid-template-columns: repeat(auto-fit,150px);
+    }
+}
 
 .image-processing img:hover,
 .iparty img:hover,
@@ -350,70 +337,94 @@ body {
     transform: scale(1.2);
     cursor: pointer;
 }
-@media (min-width:0px) and (max-width:300px) {
-    .intro img {
-        width: 50px;
-        height: 50px;
-        border-radius: 8px 8px 8px 8px;
-    }
-
-    .social-media {
-        position: relative;
-    }
-
-    .languajes {
-        width: 100px;
-        height: 100px;
-    }
-
-    .intro {
-        gap: 10px
-    }
-
-    .image-processing img,
-    .iparty img,
-    .yu-gi-oh img,
-    .pets img,
-    .restaurant img,
-    .turisim img {
-        width: 50px;
-        height: 50px;
-    }
-}
 
 /*----------------------------------------------------------------------------------------*/
 /*social media*/
 .social-media {
-    position: fixed;
     background-color: rgba(225, 127, 255, 0.178);
     box-shadow: 0px 0px 5px 5px rgba(0, 255, 242, 0.11);
-    padding: 10px;
-    border-radius: 0px 0px 20px 20px;
+    
     display: flex;
+    justify-content: center;
+    border-left: 1px solid aqua;
+    border-right: 1px solid aqua;
+    margin-top: 0px;
+    padding-top: 0px;
+    
 }
 
 .social-media img {
     transition: transform 0.3s ease-in-out;
+    padding-right: 0px;
 }
 
 .social-media img:hover {
     cursor: pointer;
-    /* padding: 20px; */
     transform: scale(1.2);
 }
 
-.linkedin,
-.github,
-.wsp,
-.email,
-.telegram {
-    position: fixed;
+.github ,
+.linkedin ,
+.wsp ,
+.email ,
+.telegram  {
     display: none;
-    top: 150px;
-    text-align: center;
-    margin: 10px;
+    position: absolute;
     color: rgba(240, 248, 255, 0.575);
-    font-size: 20px;
+    font-size: 20px;    
+    animation: moveAnimation 0.5s linear forwards,timing 0.5s linear forwards;
+}
+
+@keyframes moveAnimation {
+  0% { left: 20%; } /* Start position on the left */
+  100% { left: 30%; } /* End position at the center */
+}
+@keyframes timing {
+    0%{
+        color: rgba(240, 248, 255, 0);
+    }
+    100%{
+        color: rgba(240, 248, 255, 0.575);
+    }
+}
+
+@media (min-width:0px) and (max-width:100px) {
+    .social-media{
+        filter: none;
+    }
+}
+@media (min-width:100px) and (max-width:300px) {
+    .mycontact img
+    {
+        width: 5px;
+        height: 5px;
+    }
+    .social-media{
+        filter: none;
+    }
+}
+
+@media (min-width:300px) and (max-width:600px) {
+    .mycontact img
+    {
+        width: 20px;
+        height: 20px;
+    }
+}
+@media (min-width:600px) and (max-width:700px) {
+    .mycontact img
+    {
+        width: 50px;
+        height: 50px;
+    }
+}
+@media (min-width:700px) and (max-width:1500px) {
+    .mycontact img
+    {
+        width: 60px;
+        height: 60px;
+    }
+
 }
 
 /*----------------------------------------------------------------------------------------*/
